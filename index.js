@@ -154,7 +154,13 @@ Real links Responsive head/meta/title/favicon • Avatar img src https://i.ibb.c
 - Rich color palette (Pantone/gradient) use white, glassmorphism backgrounds
 - Responsive and mobile-friendly layout
 
-1. HERO SECTION:
+Required section are - 
+Navbar SECTION: Fixed top navbar with smooth scroll
+- Left: Logo or name
+- Right: Menu links to sections (Work, Projects, Skills, Contact)
+- Active link highlight on scroll
+- Responsive mobile menu with hamburger
+HERO SECTION:
 Clean white/cream static BG, subtle glass particles, glowing avatar
 Full name (48px kinetic text)
 Job title (22px gray)
@@ -163,32 +169,35 @@ Location (pink)
 "Hire Me!" CTA + social icons (GitHub, LinkedIn, Twitter, Email)
 3 floating CTAs: About, Projects, Contact
 
-2. WORK EXPERIENCE:
+ WORK EXPERIENCE:
 - Each job with: company logo, job title (22px bold), company name (16px gray), date (pill badge)
 - Monospace layout (IBM Plex Mono)
 - GSAP animations: fade-up or staggered
 
-3. PROJECTS:
+ PROJECTS:
 - "Proof of Work" badge with grid card layout
 - Each card: image, name, date, live status badge, description, tech stack tags
 - Buttons: "Website", "Source Code" (real links only)
 - Responsive layout, GSAP hover/fade animations
 
-4. EDUCATION
+ EDUCATION
 Degree, Institution, Duration (badge)
 Logo/icon (left), monospace text (right)
-6. SKILLS
+
+SKILLS
 Heading: "Skills" (bold monospace)
 Tech Stack: Black pill tags (white text, padded)
 Layout: Flex/grid, responsive, sorted (alphabetical/category)
-6. CONTACT
+
+ CONTACT
 Title: "Get in Touch"
 CTA: "DM on Twitter" / "Email me" (use resume contact)
-7. FOOTER:
+
+ FOOTER:
 - Owner’s name, real social icons, email
 - No dummy links
 - Monospaced, soft hover, responsive stack, top border
-8. EXTRA SECTIONS:
+EXTRA SECTIONS:
 - Render extra resume sections with matching style & animation
 
 ALL HTML, CSS, JS inside one HTML file.  
