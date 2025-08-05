@@ -154,7 +154,7 @@ Real links Responsive head/meta/title/favicon • Avatar img src https://i.ibb.c
 - Rich color palette (Pantone/gradient) use white, glassmorphism backgrounds
 - Responsive and mobile-friendly layout
 
-Required section are (navbar,hero section,work experience,project , education,skill,contact,footer) all these have to code and its content also
+Required sections are (navbar, hero section, work experience, project, education, skill, contact, footer). All these have to be coded and include their content. If any section is not in the resume, do not include it. If any other header is present in the resume, create a section for it as well.
 Navbar SECTION: Fixed top navbar with smooth scroll
 - Left: Logo or name
 - Right: Menu links to sections (Work, Projects, Skills, Contact)
