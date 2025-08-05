@@ -147,23 +147,21 @@ app.post("/gererate", upload.single("file"), async (req, res) => {
 
     const contents = [
   {
-    text: `You are a world-class UI/UX AI. Generate a premium, award-winning personal portfolio website from the resume below.
+    text: `You are a UI/UX AI. Generate a premium, award-winning personal portfolio website from the resume.
 
-Real links (GitHub, LinkedIn, Projects, Email) • Tailwind, GSAP, Google Fonts CDN • Responsive head/meta/title/favicon • Avatar (gender-based or default https://i.ibb.co/gpJXs27/yash2.jpg) • No dummy links.
+Real links Responsive head/meta/title/favicon • Avatar img src https://i.ibb.co/gpJXs27/yash2.jpg), No dummy links.
 
 - Rich color palette (Pantone/gradient) use white, glassmorphism backgrounds
-- Particle background using CSS/JS (minimal)
 - Responsive and mobile-friendly layout
 
-Required Sections:
-
 1. HERO SECTION:
-Clean white or cream static background, subtle glass particles, glowing avatar- Full name in 48px kinetic text
-- Job title in 22px gray text
-- Summary in 18px muted text
-- 📍 Location in pink-colored text
-- "Hire Me!" CTA + social links (GitHub, LinkedIn, Twitter, Email)
-- 3 floating CTA buttons: Resume (PDF), Projects, Contact
+Clean white/cream static BG, subtle glass particles, glowing avatar
+Full name (48px kinetic text)
+Job title (22px gray)
+Summary (18px muted)
+Location (pink)
+"Hire Me!" CTA + social icons (GitHub, LinkedIn, Twitter, Email)
+3 floating CTAs: About, Projects, Contact
 
 2. WORK EXPERIENCE:
 - Each job with: company logo, job title (22px bold), company name (16px gray), date (pill badge)
@@ -176,29 +174,20 @@ Clean white or cream static background, subtle glass particles, glowing avatar- 
 - Buttons: "Website", "Source Code" (real links only)
 - Responsive layout, GSAP hover/fade animations
 
-4. EDUCATION:
-- Degree name, institution, duration/date badge
-- Logo/icon left-aligned, monospace font right
-- Responsive mobile layout
-
- 6. SKILLS:
-  - Section Heading: "Skills" in large bold monospaced font.
-  - Tech Stack Tags:
-    - Display each skill (e.g., React, TypeScript, etc.) in black pill-shaped tags with white text.
-    - Padding: enough for visual clarity.
-    - Use grid or flex wrap layout to fit tags responsively.
-    - Sort alphabetically or by category (if inferred).
-
-6. CONTACT:
-- "Get in Touch" title
-- “Want to chat? DM on Twitter” or “Email me” if no Twitter
-- Use real contact from resume
-
+4. EDUCATION
+Degree, Institution, Duration (badge)
+Logo/icon (left), monospace text (right)
+6. SKILLS
+Heading: "Skills" (bold monospace)
+Tech Stack: Black pill tags (white text, padded)
+Layout: Flex/grid, responsive, sorted (alphabetical/category)
+6. CONTACT
+Title: "Get in Touch"
+CTA: "DM on Twitter" / "Email me" (use resume contact)
 7. FOOTER:
 - Owner’s name, real social icons, email
 - No dummy links
 - Monospaced, soft hover, responsive stack, top border
-
 8. EXTRA SECTIONS:
 - Render extra resume sections with matching style & animation
 
