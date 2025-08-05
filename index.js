@@ -49,7 +49,6 @@ app.get("/", (req, res) => {
   res.json({ mess: "running" });
 });
 
-
 // ✅ PDF upload route
 app.post("/upload", upload.single("file"), async (req, res) => {
   if (!req.file) {
@@ -63,7 +62,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
       resource_type: "raw",
       folder: "resumes",
     });
-    
+
     const ai = new GoogleGenAI({
       apiKey: process.env.GoogleGenAI,
     });
@@ -137,7 +136,7 @@ app.post("/gererate", upload.single("file"), async (req, res) => {
       resource_type: "raw",
       folder: "resumes",
     });
-    
+
     const ai = new GoogleGenAI({
       apiKey: process.env.GoogleGenAI,
     });
@@ -146,37 +145,20 @@ app.post("/gererate", upload.single("file"), async (req, res) => {
       response.arrayBuffer()
     );
 
-  const contents = [
+    const contents = [
   {
     text: `You are a world-class UI/UX AI. Generate a premium, award-winning personal portfolio website from the resume below.
 
-📦 Output:
-{
-  "html": "<FULL valid HTML with head and body>",
-  "css": "<Tailwind CSS + custom styles>",
-  "javascript": "<Linked JS file with working scripts – no comments>"
-}
+Real links (GitHub, LinkedIn, Projects, Email) • Tailwind, GSAP, Google Fonts CDN • Responsive head/meta/title/favicon • Avatar (gender-based or default https://i.ibb.co/gpJXs27/yash2.jpg) • No dummy links.
 
-📌 Must Include:
-- Real links (GitHub, LinkedIn, Projects, Email) from resume only
-- CDN links for Tailwind CSS, GSAP, Google Fonts (IBM Plex Mono, Inter, etc.)
-- Responsive <head> with meta viewport, title, favicon if available
-- Gender/name-based avatar or use this default image if not found:
-  https://i.ibb.co/gpJXs27/yash2.jpg
-- NO dummy links or "#" – only working links from the resume or skip that button
-
-🎨 Design System:
-- Rich color palette (Pantone/gradient), glassmorphism backgrounds
-- Kinetic typography (animated name), glowing effects, soft shadows
+- Rich color palette (Pantone/gradient) use white, glassmorphism backgrounds
 - Particle background using CSS/JS (minimal)
 - Responsive and mobile-friendly layout
-- No comments, no placeholders, no broken links
 
-📐 Required Sections:
+Required Sections:
 
 1. HERO SECTION:
-- Animated gradient background, glass particles, glowing avatar
-- Full name in 48px kinetic text
+Clean white or cream static background, subtle glass particles, glowing avatar- Full name in 48px kinetic text
 - Job title in 22px gray text
 - Summary in 18px muted text
 - 📍 Location in pink-colored text
@@ -199,42 +181,33 @@ app.post("/gererate", upload.single("file"), async (req, res) => {
 - Logo/icon left-aligned, monospace font right
 - Responsive mobile layout
 
-5. SKILLS:
-- Pill-style black tags with white text (React, TypeScript, etc.)
-- Alphabetized or grouped by type (Frontend, Backend, Tools)
-- Flex wrap layout
+ 6. SKILLS:
+  - Section Heading: "Skills" in large bold monospaced font.
+  - Tech Stack Tags:
+    - Display each skill (e.g., React, TypeScript, etc.) in black pill-shaped tags with white text.
+    - Padding: enough for visual clarity.
+    - Use grid or flex wrap layout to fit tags responsively.
+    - Sort alphabetically or by category (if inferred).
 
 6. CONTACT:
 - "Get in Touch" title
-- Line: “Want to chat? DM on Twitter” or “Email me” if no Twitter
-- Use real email or Twitter from resume
-- Clean, centered, monospace
+- “Want to chat? DM on Twitter” or “Email me” if no Twitter
+- Use real contact from resume
 
 7. FOOTER:
-- Resume owner’s name (e.g. "© Yash Vikram"), real social icons, email
+- Owner’s name, real social icons, email
 - No dummy links
-- Monospaced font, soft hover effects, responsive stack, top border
+- Monospaced, soft hover, responsive stack, top border
 
-8. EXTRA SECTIONS (Optional):
-- If the resume includes additional sections (Certifications, Volunteering, Awards, etc.), render them with matching style and animation.
+8. EXTRA SECTIONS:
+- Render extra resume sections with matching style & animation
 
-⚙️ Tech Stack:
-- GSAP, Tailwind CSS, CSS 3D transforms, scroll snapping
-- Lazy-load images
-- 95+ Lighthouse performance
-- Fully accessible with semantic HTML and ARIA
+ALL HTML, CSS, JS inside one HTML file.  
+No markdown, placeholders, comments, or explanations.  
 
-🚫 Do NOT include:
-- Any markdown
-- Any placeholder URLs
-- Any comments in code
-- Any explanation text
-
-✅ Output valid JSON only, exactly in this structure:
+Output only:
 {
-  "html": "...",
-  "css": "...",
-  "javascript": "..."
+  "html": "<FULL HTML with inline CSS & JS>"
 }`
   },
   {
@@ -244,9 +217,6 @@ app.post("/gererate", upload.single("file"), async (req, res) => {
     },
   },
 ];
-
-
-
 
 
     const response = await ai.models.generateContent({
@@ -270,11 +240,6 @@ app.post("/gererate", upload.single("file"), async (req, res) => {
     return res.status(500).json({ error: "Upload to Cloudinary failed" });
   }
 });
-
-
-
-
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
