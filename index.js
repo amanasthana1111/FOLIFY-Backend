@@ -154,13 +154,13 @@ Real links Responsive head/meta/title/favicon • Avatar img src https://i.ibb.c
 - Rich color palette (Pantone/gradient) use white, glassmorphism backgrounds
 - Responsive and mobile-friendly layout
 
-Required sections are (navbar, hero section, work experience, project, education, skill, contact, footer). All these have to be coded and include their content. If any section is not in the resume, do not include it. If any other header is present in the resume, create a section for it as well.
-Navbar SECTION: Fixed top navbar with smooth scroll
+Required sections are below -
+1.Navbar SECTION: Fixed top navbar with smooth scroll
 - Left: Logo or name
 - Right: Menu links to sections (Work, Projects, Skills, Contact)
 - Active link highlight on scroll
 - Responsive mobile menu with hamburger
-HERO SECTION:
+2.HERO SECTION:
 Clean white/cream static BG, subtle glass particles, glowing avatar
 Full name (48px kinetic text)
 Job title (22px gray)
@@ -169,35 +169,39 @@ Location (pink)
 "Hire Me!" CTA + social icons (GitHub, LinkedIn, Twitter, Email)
 3 floating CTAs: About, Projects, Contact
 
- WORK EXPERIENCE:
+if in Resumes have work experience than include other wies not include work experience section.
+ 3.WORK EXPERIENCE SECTION:(take all info from resumes)
 - Each job with: company logo, job title (22px bold), company name (16px gray), date (pill badge)
 - Monospace layout (IBM Plex Mono)
 - GSAP animations: fade-up or staggered
-
- PROJECTS:
+if in Resumes have Project than include other wies not include Project section.
+ PROJECTS SECTION:
 - "Proof of Work" badge with grid card layout
 - Each card: image, name, date, live status badge, description, tech stack tags
 - Buttons: "Website", "Source Code" (real links only)
 - Responsive layout, GSAP hover/fade animations
 
- EDUCATION
+if in Resumes have education section than include other wies not include education section.
+ EDUCATION SECTION (take all info from resumes)
 Degree, Institution, Duration (badge)
 Logo/icon (left), monospace text (right)
 
-SKILLS
+SKILLS SECTION (take all info from resumes)
 Heading: "Skills" (bold monospace)
 Tech Stack: Black pill tags (white text, padded)
 Layout: Flex/grid, responsive, sorted (alphabetical/category)
 
- CONTACT
+
+ CONTACT SECTION (take all info from resumes)
 Title: "Get in Touch"
 CTA: "DM on Twitter" / "Email me" (use resume contact)
 
- FOOTER:
+ FOOTER SECTION:
 - Owner’s name, real social icons, email
-- No dummy links
+- No dummy links all link should be working.
 - Monospaced, soft hover, responsive stack, top border
-EXTRA SECTIONS:
+
+EXTRA SECTIONS (if any other header present in resumes make a new section):
 - Render extra resume sections with matching style & animation
 
 ALL HTML, CSS, JS inside one HTML file.  
