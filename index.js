@@ -169,29 +169,29 @@ Location (pink)
 "Hire Me!" CTA + social icons (GitHub, LinkedIn, Twitter, Email)
 3 floating CTAs: About, Projects, Contact
 
-if in Resumes have work experience than include other wies not include work experience section.
+If work experience exists, include it in the position specified in the resume; otherwise, skip it and render the other sections as listed.
  3.WORK EXPERIENCE SECTION:(take all info from resumes)
 - Each job with: company logo, job title (22px bold), company name (16px gray), date (pill badge)
 - Monospace layout (IBM Plex Mono)
 - GSAP animations: fade-up or staggered
-if in Resumes have Project than include other wies not include Project section.
+If project header in resumes exists, include it in the position specified in the resume; otherwise, skip it and render the other sections as listed.
  PROJECTS SECTION:
 - "Proof of Work" badge with grid card layout
 - Each card: image, name, date, live status badge, description, tech stack tags
 - Buttons: "Website", "Source Code" (real links only)
 - Responsive layout, GSAP hover/fade animations
 
-if in Resumes have education section than include other wies not include education section.
+If education header in resumes exists, include it in the position specified in the resume; otherwise, skip it and render the other sections as listed.
  EDUCATION SECTION (take all info from resumes)
 Degree, Institution, Duration (badge)
 Logo/icon (left), monospace text (right)
-
+If skills header in resumes exists, include it in the position specified in the resume; otherwise, skip it and render the other sections as listed.
 SKILLS SECTION (take all info from resumes)
 Heading: "Skills" (bold monospace)
 Tech Stack: Black pill tags (white text, padded)
 Layout: Flex/grid, responsive, sorted (alphabetical/category)
 
-
+If contact info in resumes exists, include it in the position specified in the resume; otherwise, skip it and render the other sections as listed.
  CONTACT SECTION (take all info from resumes)
 Title: "Get in Touch"
 CTA: "DM on Twitter" / "Email me" (use resume contact)
@@ -201,6 +201,7 @@ CTA: "DM on Twitter" / "Email me" (use resume contact)
 - No dummy links all link should be working.
 - Monospaced, soft hover, responsive stack, top border
 
+Include all headers present in the resume. For each header, create a section only if the corresponding content exists; if no content exists for that header, skip the section entirely.
 EXTRA SECTIONS (if any other header present in resumes make a new section):
 - Render extra resume sections with matching style & animation
 
