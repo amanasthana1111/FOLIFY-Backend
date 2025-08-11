@@ -247,7 +247,7 @@ Output only:
     return res.status(500).json({ error: "Upload to Cloudinary failed" });
   }
 });
-let userCount = 459;
+let userCount = process.env.Total_user;
 app.get("/users", (req, res) => {
   userCount++;
   res.json({
