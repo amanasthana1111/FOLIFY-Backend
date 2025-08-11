@@ -247,7 +247,13 @@ Output only:
     return res.status(500).json({ error: "Upload to Cloudinary failed" });
   }
 });
-
+let userCount = 459;
+app.get("/users", (req, res) => {
+  userCount++;
+  res.json({
+    "TotalView" : userCount
+  })
+});
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
