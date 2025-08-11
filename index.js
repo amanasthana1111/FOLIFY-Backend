@@ -76,7 +76,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
         text: `You are a system that analyzes resumes against job descriptions. You must extract key data from the resume and compare it with the job posting. Respond with JSON containing:
 
 {
-  "job_position": "string",
+  "job_position": "string"(see whole resumes there skills and findout which job postiton they able to apply in job_postion),
   "ats_score": "percentage",
   "matched_keywords": ["string"],
   "missing_keywords": ["string"],
